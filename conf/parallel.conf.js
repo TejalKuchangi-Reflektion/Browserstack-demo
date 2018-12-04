@@ -10,12 +10,16 @@ exports.config = {
 
   capabilities: [
     {
-      browserName: 'chrome',
-      name: 'parallel tests',
+      os: 'OS X',
+      os_version: 'Mojave',
+      browserName: 'Safari',
+      browser_version: '12.0',
     },
     {
-      browserName: 'safari',
-      name: 'parallel tests',
+      os: 'Windows',
+      os_version: '10',
+      browserName: 'Chrome',
+      browser_version: '62.0',
     },
   ],
 };
