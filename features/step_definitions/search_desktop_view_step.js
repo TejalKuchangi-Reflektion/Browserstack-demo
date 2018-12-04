@@ -19,9 +19,7 @@ module.exports = function() {
       });
   });
 
-  this.When(/^I enter the keyword "([^"]*)" into the search bar$/, function(
-    keyword,
-  ) {
+  this.When(/^I enter the keyword "([^"]*)" into the search bar$/, function(keyword) {
     return this.driver
       .findElement(webdriver.By.id('search'))
       .then(function(element) {
@@ -46,9 +44,7 @@ module.exports = function() {
       });
   });
 
-  this.Then(/^I am navigated to the search page of "([^"]*)"$/, function(
-    keyword,
-  ) {
+  this.Then(/^I am navigated to the search page of "([^"]*)"$/, function(keyword) {
     return this.driver.getCurrentUrl().then(url => {
       expect(url).to.contain(keyword);
     });
